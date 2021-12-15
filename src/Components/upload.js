@@ -20,29 +20,25 @@ class Uploadimage extends Component {
     onChange = (e) => {
         // Update the state
         this.setState({selectedFile: e.target.files[0]})
-        console.log("file selected")
 
     }
 
     uploadFile = (e) => {
-        console.log("came inside uploadefilefunction")
         e.preventDefault();
 
         // Create an object of formData
         let formData = new FormData();
-        console.log("came after object of formData")
 
 
         // Update the formData object
 
         formData.append('file', this.state.selectedFile);
 
-        console.log("came after appenddata")
 
 
         console.log(this.state.selectedFile);
         
-        axios.post("http://localhost:3002/uploadfile", formData, { headers: {'Content-Type': 'multipart/form-data'}})
+        axios.post("http://localhost:5000/uploadfile", formData, { headers: {'Content-Type': 'multipart/form-data'}})
             .then((res) => {
                 console.log(res)
                 if (res.status === 200)
