@@ -11,10 +11,7 @@ class Uploadimage extends Component {
             errormessage:" ",
         }
     }
-    reset(){
-        this.setState({
-            selectedFile: null,
-        });
+    
     }
     onChange = (e) => {
         // Update the state
