@@ -10,7 +10,6 @@ class Uploadimage extends Component {
             sucessmessage:" ",
             errormessage:" ",
         }
-        this.uploadFile = this.uploadFile.bind(this);
     }
     reset(){
         this.setState({
