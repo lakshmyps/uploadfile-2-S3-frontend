@@ -12,7 +12,6 @@ class Uploadimage extends Component {
         }
     }
     
-    }
     onChange = (e) => {
         // Update the state
         this.setState({selectedFile: e.target.files[0]})
